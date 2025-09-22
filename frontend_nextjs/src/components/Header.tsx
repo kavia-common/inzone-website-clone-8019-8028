@@ -36,6 +36,8 @@ export function Header() {
         <Link href="/blog">Blog</Link>
         <Link href="/faq">FAQs</Link>
         <Link href="/podcast">Podcast</Link>
+        <Link href="/testimonials">Testimonials</Link>
+        <Link href="/referral">Referral</Link>
         <Link href="/contact">Contact</Link>
       </div>
 
@@ -77,6 +79,12 @@ export function Header() {
           </Link>
           <Link href="/podcast" onClick={() => setOpen(false)}>
             Podcast
+          </Link>
+          <Link href="/testimonials" onClick={() => setOpen(false)}>
+            Testimonials
+          </Link>
+          <Link href="/referral" onClick={() => setOpen(false)}>
+            Referral
           </Link>
           <Link href="/contact" onClick={() => setOpen(false)}>
             Contact

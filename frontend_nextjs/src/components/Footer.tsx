@@ -30,6 +30,8 @@ export function Footer() {
             <li><Link href="/faq">FAQs</Link></li>
             <li><Link href="/blog">Blog</Link></li>
             <li><Link href="/podcast">Podcast</Link></li>
+            <li><Link href="/testimonials">Testimonials</Link></li>
+            <li><Link href="/referral">Referral</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>
@@ -41,6 +43,14 @@ export function Footer() {
             <li><Link href="/services/meydan">Meydan</Link></li>
             <li><Link href="/services/shams">Shams</Link></li>
             <li><Link href="/services/rakicc">RAK ICC</Link></li>
+            <li><Link href="/services/corporate">Corporate Services</Link></li>
+            <li><Link href="/services/corporate/pro-services">— PRO Services</Link></li>
+            <li><Link href="/services/corporate/visa-services">— Visa Services</Link></li>
+            <li><Link href="/services/corporate/open-bank-account">— Open Bank Account</Link></li>
+            <li><Link href="/services/corporate/vat-registration">— VAT Registration</Link></li>
+            <li><Link href="/services/corporate/corporate-tax-consulting">— Corporate Tax</Link></li>
+            <li><Link href="/services/corporate/accounting-bookkeeping">— Accounting</Link></li>
+            <li><Link href="/services/corporate/audit">— Audit</Link></li>
           </ul>
         </div>
         <div>
