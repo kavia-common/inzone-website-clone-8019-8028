@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InZone.ae Static Clone (Next.js 14 App Router)
 
-## Getting Started
+This repository contains a high‑fidelity, static clone of https://www.inzone.ae/ built with Next.js 14 App Router. It follows the Ocean Professional theme, WCAG 2.1 AA accessibility, SEO best practices, and is fully configured for Static Site Generation (SSG) export.
 
-First, run the development server:
+Key features:
+- Pixel-accurate multi-page structure based on design notes in /assets
+- Mobile-first responsive layout using CSS Grid/Flex
+- Accessible navigation with keyboard support, ARIA, focus management
+- SEO meta, Open Graph, Twitter Cards, JSON-LD structured data
+- Static export ready (out/), sitemap.xml and robots.txt included
+- Ocean Professional theme via CSS variables and utilities
+- Optimized images using Next.js Image and static assets
+- TypeScript, ESLint, PostCSS
+- Ready for CI/CD (Vercel/Netlify/Static hosting)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Quick start:
+- npm i
+- npm run dev
+- npm run build && npm run export (outputs to /out)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Environment variables:
+- No secrets required for static build. For canonical domain, set NEXT_PUBLIC_SITE_URL in .env (example in .env.example).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Project structure:
+- src/app: App Router with pages and routes
+- src/components: Layout, navigation, footer, UI components
+- src/lib: SEO/metadata utilities, constants, schema helpers
+- public/assets: Project images (copied from /assets/img at build time by repo management; ensure images exist here)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Accessibility and SEO:
+- All interactive elements are keyboard navigable
+- Focus styles are visible and meet contrast
+- alt text is descriptive; decorative images are aria-hidden
+- Landmarks (header/nav/main/aside/footer) used with aria-label
+- Head metadata via generateMetadata with per-page overrides
+- Structured data JSON-LD for website, org, breadcrumbs, and articles
 
-## Learn More
+Build/Export:
+- npm run build (Next.js production build)
+- npm run export (static export to /out)
+- Serve /out on any static hosting (Netlify, Vercel static, S3, etc.)
 
-To learn more about Next.js, take a look at the following resources:
+Testing (recommended):
+- Add Playwright or Cypress for E2E
+- Add Jest/RTL for unit/integration tests
+- Run Lighthouse/Axe for performance and accessibility
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deployment:
+- Vercel: push to main (configure project). No server required.
+- Netlify: build command `npm run build && npm run export`, publish directory `out`.
+- S3/CloudFront: sync /out to bucket.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Notes:
+- This clone uses content based on provided design notes. Update content in page files and components per the latest requirements.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+License:
+- For internal evaluation and cloning purposes. Verify licensing of assets before public deployment.
